@@ -263,21 +263,4 @@ Period Covered:
 * AI-Driven Financial Insights
 * Advanced Financial Benchmarking
 
----
 
-## 👨‍💻 Author
-
-### Akarsh Anubhav
-
-B.Tech – Computer Science Engineering (Big Data Analytics)
-
-SRM Institute of Science and Technology
-
-#### Connect With Me
-
-* GitHub: https://github.com/akarshCpp
-* Instagram: https://www.instagram.com/_akarsh_xd/
-
----
-
-⭐ If you found this project useful, consider giving the repository a star!
