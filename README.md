@@ -1,48 +1,100 @@
 # 🏥 Arogya Health Revenue & Margin Dashboard
 
-A Power BI dashboard developed for **Problem Statement 3 – Revenue & Margin Strategy** in the **Arogya Health Analytics Challenge**.
+A Power BI dashboard developed for **Problem Statement 3 – Revenue & Margin Strategy** as part of the **Arogya Health Analytics Challenge**.
 
-## 📌 Problem Statement
+## 📌 Overview
 
-As a Financial Strategy Analyst advising the **Chief Financial Officer (CFO)** of Arogya Health, the objective was to answer:
+Healthcare organizations often focus on revenue growth while overlooking profitability and collection efficiency. This project analyzes Arogya Health's financial performance to uncover where revenue is generated, where margins are lost, and how much billed revenue is actually realized.
+
+The dashboard provides a CFO-level view of revenue, profitability, and revenue leakage across hospitals, departments, and insurance payers.
+
+---
+
+## 🎯 Business Problem
+
+As a Financial Strategy Analyst advising the **Chief Financial Officer (CFO)**, the objective was to answer:
 
 > **Where does Arogya actually make and lose money, and which revenue are we booking but failing to collect?**
 
-The dashboard provides decision-grade insights into revenue generation, profitability, and collection efficiency across hospitals, departments, and insurance payers.
+The dashboard helps identify:
+
+* High-revenue departments
+* High-margin service lines
+* Revenue leakage sources
+* Collection efficiency issues
+* Insurance payer performance
+
+---
+
+## 📷 Dashboard Preview
+
+![Dashboard Preview](dashboard.png)
 
 ---
 
 ## 🚀 Features
 
-* Revenue trend analysis (Billed vs Realized Revenue)
-* Department-wise revenue contribution
-* Net Margin analysis by department
-* Revenue leakage analysis by insurance payer
-* Payment status distribution
-* Interactive slicers for:
+### Financial Performance Analysis
 
-  * Year
-  * Hospital
-  * Department
-  * Insurance Payer
+* Total Revenue Tracking
+* Revenue Trend Analysis
+* Net Profit Monitoring
+* Net Margin Evaluation
+
+### Revenue Realization Analysis
+
+* Realized Revenue Tracking
+* Revenue Leakage Identification
+* Collection Efficiency Monitoring
+* Payment Status Breakdown
+
+### Department Performance Analysis
+
+* Revenue Contribution by Department
+* Profitability Comparison
+* High Margin vs Low Margin Service Lines
+
+### Payer Analysis
+
+* Insurance Payer Performance
+* Revenue Realization by Payer
+* Collection Risk Identification
+
+### Interactive Filtering
+
+* Year Filter
+* Hospital Filter
+* Department Filter
+* Insurance Payer Filter
 
 ---
 
-## 📊 KPIs Implemented
+## 📊 Key Performance Indicators (KPIs)
 
-* **Total Revenue Billed & Trend**
-* **Revenue Contribution by Department & Payer**
-* **Average Revenue per Encounter**
-* **Net Margin by Department**
-* **Revenue Realization Rate**
+### Revenue Metrics
+
+* Total Revenue
+* Realized Revenue
 * Revenue Leakage
-* Collection Efficiency
+* Average Revenue per Encounter
+
+### Profitability Metrics
+
+* Net Profit
+* Net Margin %
+
+### Collection Metrics
+
+* Revenue Realization %
+* Collection Efficiency %
 
 ---
 
 ## 📈 Dashboard Components
 
-### KPI Cards
+### 1. Executive KPI Cards
+
+Provides a quick overview of:
 
 * Total Revenue
 * Realized Revenue
@@ -51,73 +103,181 @@ The dashboard provides decision-grade insights into revenue generation, profitab
 * Net Margin %
 * Average Revenue per Encounter
 
-### Visualizations
+### 2. Revenue Trend Analysis
 
-* Revenue Trend: Billed vs Realized
-* Revenue Contribution by Department (Treemap)
+**Line Chart**
+
+Tracks:
+
+* Billed Revenue
+* Realized Revenue
+
+Purpose:
+
+* Understand revenue growth trends
+* Compare revenue generated vs revenue collected
+
+### 3. Revenue Contribution Analysis
+
+**Treemap**
+
+Shows:
+
+* Revenue contribution by department
+
+Purpose:
+
+* Identify major revenue-generating departments
+* Analyze revenue concentration
+
+### 4. Department Profitability Analysis
+
+**Bar Chart**
+
+Shows:
+
 * Net Margin % by Department
-* Revenue Leakage & Realized Revenue by Insurance Payer
-* Revenue Distribution by Payment Status
+
+Purpose:
+
+* Identify profitable departments
+* Detect margin leakage
+
+### 5. Revenue Realization by Payer
+
+**Stacked Bar Chart**
+
+Shows:
+
+* Realized Revenue
+* Revenue Leakage
+
+Purpose:
+
+* Identify problematic payer segments
+* Analyze collection efficiency
+
+### 6. Payment Status Distribution
+
+**Donut Chart**
+
+Displays:
+
+* Paid
+* Partially Paid
+* Pending
+* Insurance Claimed
+
+Purpose:
+
+* Evaluate revenue realization performance
 
 ---
 
-## 🛠 Tools Used
+## 🧮 DAX Measures Created
 
-* Microsoft Power BI
-* DAX
-* Data Modeling (Star Schema)
-* Time Intelligence
+### Revenue Measures
 
----
+```DAX
+Total Revenue
+Total Cost
+Net Profit
+Net Margin %
+Total Encounters
+Avg Revenue Per Encounter
+```
 
-## 📂 Dataset
+### Collection Measures
 
-The dataset contains:
-
-* 50,000+ patient encounters
-* 18,000 patients
-* 15 hospitals
-* 320 doctors
-
-covering the years **2023–2025**.
-
----
-
-## 🎯 Key Insights
-
-* Revenue alone does not indicate profitability.
-* High-revenue departments may operate on thin margins.
-* A portion of billed revenue remains unrealized.
-* Insurance payers contribute differently to collection efficiency.
-* Revenue leakage can significantly affect financial performance.
-
----
-
-## 📷 Dashboard Preview
-
-
-
-```markdown
-![Dashboard Preview](Screenshot 2026-06-17 002137)
+```DAX
+Realized Revenue
+Revenue Realization %
+Revenue Leakage
+Collection Efficiency %
 ```
 
 ---
 
-## 🔮 Future Improvements
+## 🏗 Data Model
 
-* Drill-through pages
-* Dynamic KPI selection
-* Advanced revenue forecasting
-* Executive summary page
-* Custom Power BI theme
+The dashboard follows a **Star Schema** architecture.
+
+### Fact Table
+
+* Encounters
+
+### Dimension Tables
+
+* Patients
+* Hospitals
+* Doctors
+* Date Table
+
+This structure improves performance and simplifies analysis.
+
+---
+
+## 🛠 Tools & Technologies
+
+* Microsoft Power BI
+* DAX (Data Analysis Expressions)
+* Data Modeling
+* Star Schema Design
+* Interactive Visualizations
+
+---
+
+## 📂 Dataset Overview
+
+The dataset contains:
+
+| Dataset    | Records |
+| ---------- | ------- |
+| Encounters | 50,000+ |
+| Patients   | 18,000+ |
+| Hospitals  | 15      |
+| Doctors    | 320     |
+
+Period Covered:
+
+**2023 – 2025**
+
+---
+
+## 💡 Key Insights
+
+* Revenue alone does not indicate profitability.
+* High-revenue departments may operate on lower margins.
+* A significant portion of billed revenue remains unrealized.
+* Collection efficiency varies across insurance payers.
+* Revenue leakage directly impacts overall profitability.
+
+---
+
+## 🔮 Future Enhancements
+
+* Revenue Forecasting
+* Drill-Through Analysis
+* Executive Summary Page
+* Dynamic KPI Selection
+* AI-Driven Financial Insights
+* Advanced Financial Benchmarking
 
 ---
 
 ## 👨‍💻 Author
 
-**Akarsh Anubhav**
+### Akarsh Anubhav
 
-B.Tech CSE (Big Data Analytics)
+B.Tech – Computer Science Engineering (Big Data Analytics)
+
 SRM Institute of Science and Technology
 
-GitHub: https://github.com/akarshCpp
+#### Connect With Me
+
+* GitHub: https://github.com/akarshCpp
+* Instagram: https://www.instagram.com/_akarsh_xd/
+
+---
+
+⭐ If you found this project useful, consider giving the repository a star!
