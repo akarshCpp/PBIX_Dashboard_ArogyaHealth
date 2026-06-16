@@ -95,10 +95,10 @@ covering the years **2023–2025**.
 
 ## 📷 Dashboard Preview
 
-*(Add a screenshot of the dashboard here)*
+
 
 ```markdown
-![Dashboard Preview](dashboard.png)
+![Dashboard Preview](Screenshot 2026-06-17 002137)
 ```
 
 ---
